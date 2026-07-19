@@ -1,5 +1,5 @@
 import { fetchCommunity, healthCheck, searchModels } from "../lib/api";
-import { bindVoteButtons, renderModelCard, renderSearchResults } from "./render";
+import { bindVoteButtons, renderEmptyState, renderModelCard, renderSearchResults, renderSkeletons } from "./render";
 
 type TabId = "search" | "page" | "community";
 
@@ -11,12 +11,23 @@ const pageResults = document.getElementById("page-results") as HTMLElement;
 const pageQuery = document.getElementById("page-query") as HTMLInputElement;
 const communityList = document.getElementById("community-list") as HTMLElement;
 const communityStatus = document.getElementById("community-status") as HTMLElement;
+const apiDot = document.getElementById("api-dot") as HTMLElement;
+const tabIndicator = document.querySelector(".tab-indicator") as HTMLElement | null;
 
 let searchTimer: ReturnType<typeof setTimeout> | undefined;
 
+function moveIndicatorTo(tabEl: HTMLElement): void {
+  if (!tabIndicator) return;
+  tabIndicator.style.width = `${tabEl.offsetWidth}px`;
+  tabIndicator.style.transform = `translateX(${tabEl.offsetLeft - 4}px)`;
+}
+
 function setTab(tab: TabId): void {
-  document.querySelectorAll(".tab").forEach((el) => {
-    el.classList.toggle("active", (el as HTMLElement).dataset.tab === tab);
+  document.querySelectorAll<HTMLElement>(".tab").forEach((el) => {
+    const isActive = el.dataset.tab === tab;
+    el.classList.toggle("active", isActive);
+    el.setAttribute("aria-selected", String(isActive));
+    if (isActive) moveIndicatorTo(el);
   });
   document.querySelectorAll(".panel").forEach((el) => {
     el.classList.toggle("active", el.id === `panel-${tab}`);
@@ -24,47 +35,62 @@ function setTab(tab: TabId): void {
   if (tab === "community") void loadCommunity();
 }
 
+function setStatus(el: HTMLElement, text: string, loading = false): void {
+  el.textContent = text;
+  el.classList.toggle("loading", loading && Boolean(text));
+}
+
 async function runSearch(query: string, statusEl: HTMLElement, resultsEl: HTMLElement): Promise<void> {
   const q = query.trim();
   if (!q) {
     resultsEl.innerHTML = "";
-    statusEl.textContent = "";
+    setStatus(statusEl, "");
     return;
   }
-  statusEl.textContent = "Searching sourced catalog…";
+  setStatus(statusEl, "Searching sourced catalog…", true);
+  resultsEl.innerHTML = renderSkeletons(3);
   try {
     const results = await searchModels(q);
     resultsEl.innerHTML = renderSearchResults(results);
     bindVoteButtons(resultsEl);
-    statusEl.textContent =
+    setStatus(
+      statusEl,
       results.length === 0
         ? "No sourced matches."
-        : `${results.length} match${results.length === 1 ? "" : "es"}`;
+        : `${results.length} match${results.length === 1 ? "" : "es"}`,
+    );
   } catch (e) {
-    resultsEl.innerHTML = "";
-    statusEl.textContent =
+    resultsEl.innerHTML = renderEmptyState("API unreachable", "Start the local API or check your connection.");
+    setStatus(
+      statusEl,
       e instanceof Error
         ? e.message
-        : "API unreachable. Start the local API or set apiBase in storage.";
+        : "API unreachable. Start the local API or set apiBase in storage.",
+    );
   }
 }
 
 async function loadCommunity(): Promise<void> {
-  communityStatus.textContent = "Loading community signals…";
+  setStatus(communityStatus, "Loading community signals…", true);
+  communityList.innerHTML = renderSkeletons(2);
   try {
     const items = await fetchCommunity();
     if (items.length === 0) {
-      communityList.innerHTML = `<p class="empty">No votes yet. Search a model and cast Up/Down to start the feed.</p>`;
-      communityStatus.textContent = "";
+      communityList.innerHTML = renderEmptyState(
+        "No votes yet",
+        "Search a model and cast Up/Down to start the feed.",
+      );
+      setStatus(communityStatus, "");
       return;
     }
     communityList.innerHTML = items
-      .map((item) => renderModelCard(item.model, item.votes))
+      .map((item, i) => renderModelCard(item.model, item.votes, null, i))
       .join("");
     bindVoteButtons(communityList);
-    communityStatus.textContent = `${items.length} models with votes`;
+    setStatus(communityStatus, `${items.length} model${items.length === 1 ? "" : "s"} with votes`);
   } catch (e) {
-    communityStatus.textContent = e instanceof Error ? e.message : "Failed to load community";
+    communityList.innerHTML = renderEmptyState("Couldn't load community", "Check the API connection and try again.");
+    setStatus(communityStatus, e instanceof Error ? e.message : "Failed to load community");
   }
 }
 
@@ -144,10 +170,18 @@ document.getElementById("btn-search-page-query")?.addEventListener("click", () =
   void runSearch(pageQuery.value, pageStatus, pageResults);
 });
 
+// Position the sliding tab indicator once layout is ready.
+requestAnimationFrame(() => {
+  const activeTab = document.querySelector<HTMLElement>(".tab.active");
+  if (activeTab) moveIndicatorTo(activeTab);
+});
+
 void (async () => {
   const ok = await healthCheck();
+  apiDot.classList.add(ok ? "online" : "offline");
+  apiDot.title = ok ? "API online" : "API offline";
   if (!ok) {
-    searchStatus.textContent = "API offline — run npm run dev:api (localhost:3000)";
+    setStatus(searchStatus, "API offline — run npm run dev:api (localhost:3000)");
   }
 
   const session = await chrome.storage.session.get([

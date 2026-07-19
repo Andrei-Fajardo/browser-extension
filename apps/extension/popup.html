@@ -4,32 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mouse Parts Lookup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="/src/popup/popup.css" />
   </head>
   <body>
     <div id="app">
+      <div class="bg-orb orb-a"></div>
+      <div class="bg-orb orb-b"></div>
+
       <header class="header">
-        <div>
-          <p class="eyebrow">Mouse Parts Lookup</p>
-          <h1>Parts, not guesses</h1>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="7" y="2" width="10" height="20" rx="5" stroke="currentColor" stroke-width="1.6" />
+              <line x1="12" y1="2" x2="12" y2="9" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+          </span>
+          <div>
+            <p class="eyebrow">Mouse Parts Lookup</p>
+            <h1>Parts, not guesses</h1>
+          </div>
         </div>
+        <span id="api-dot" class="api-dot" title="API status"></span>
       </header>
 
       <nav class="tabs" role="tablist">
-        <button class="tab active" data-tab="search" type="button">Search</button>
-        <button class="tab" data-tab="page" type="button">Page</button>
-        <button class="tab" data-tab="community" type="button">Community</button>
+        <span class="tab-indicator" aria-hidden="true"></span>
+        <button class="tab active" data-tab="search" type="button" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><line x1="20" y1="20" x2="15.8" y2="15.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>Search</span>
+        </button>
+        <button class="tab" data-tab="page" type="button" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v13m0 0-4-4m4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="17" width="16" height="4" rx="1.2" stroke="currentColor" stroke-width="1.8"/></svg>
+          <span>Page</span>
+        </button>
+        <button class="tab" data-tab="community" type="button" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M4 19c0-2.8 2.2-5 5-5s5 2.2 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 13.2c2.3.4 3.9 2.3 3.9 4.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Community</span>
+        </button>
       </nav>
 
       <section id="panel-search" class="panel active">
         <label class="field">
           <span>Brand or model</span>
-          <input
-            id="search-input"
-            type="search"
-            placeholder="Pulsefire, Lamzu, Vaxee…"
-            autocomplete="off"
-          />
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"/><line x1="20" y1="20" x2="15.8" y2="15.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Pulsefire, Lamzu, Vaxee…"
+              autocomplete="off"
+            />
+          </div>
         </label>
         <p id="search-status" class="status" aria-live="polite"></p>
         <div id="search-results" class="results"></div>
@@ -41,15 +67,26 @@
           query — it never invents part numbers.
         </p>
         <div class="actions">
-          <button id="btn-lookup-selection" type="button">Lookup selection</button>
-          <button id="btn-scan-page" type="button">Scan page text</button>
-          <button id="btn-region-ocr" type="button" class="primary">Select image region</button>
+          <button id="btn-lookup-selection" type="button" class="action-btn">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6 3h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Lookup selection</span>
+          </button>
+          <button id="btn-scan-page" type="button" class="action-btn">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 8V5a1 1 0 0 1 1-1h3M4 16v3a1 1 0 0 0 1 1h3M20 8V5a1 1 0 0 0-1-1h-3M20 16v3a1 1 0 0 1-1 1h-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="12" x2="20" y2="12" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 2"/></svg>
+            <span>Scan page text</span>
+          </button>
+          <button id="btn-region-ocr" type="button" class="action-btn primary">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="5.5" width="17" height="13" rx="2" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/></svg>
+            <span>Select image region</span>
+          </button>
         </div>
         <label class="field">
           <span>Extracted / confirmed query</span>
-          <input id="page-query" type="text" placeholder="Confirm OCR text here" />
+          <div class="input-wrap">
+            <input id="page-query" type="text" placeholder="Confirm OCR text here" />
+          </div>
         </label>
-        <button id="btn-search-page-query" type="button" class="primary full">Search confirmed text</button>
+        <button id="btn-search-page-query" type="button" class="action-btn primary full">Search confirmed text</button>
         <p id="page-status" class="status" aria-live="polite"></p>
         <div id="page-results" class="results"></div>
       </section>
