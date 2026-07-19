@@ -347,6 +347,8 @@ Do not collect browsing history beyond the active lookup action. Do not phone ho
 - Context menu selection lookup + page scan + **image region OCR**
 
 ### M4 — Scraping / import pipeline
+- **OEM scrapers** (Logitech/Razer/HyperX/…): robots-checked allowlist, structured specs where present
+- **RTINGS scraper**: robots-allowed review pages; free intro/meta extraction only (no paywall bypass)
 - TechPowerUp importer (offline `--from-html` by default; live fetch gated on written permission — TPU ToS)
 - Curated seed extractions merged into catalog with citations
 - Provenance storage; no silent overwrite on conflicts

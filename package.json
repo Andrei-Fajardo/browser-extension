@@ -15,6 +15,9 @@
     "prepare-ocr": "node scripts/prepare-ocr-assets.mjs",
     "scrape:tpu:apply-curated": "npm run apply-curated -w @mouse-parts/scraper-techpowerup",
     "scrape:tpu": "npm run scrape -w @mouse-parts/scraper-techpowerup --",
+    "scrape:oem": "npm run scrape -w @mouse-parts/scraper-oem --",
+    "scrape:rtings": "npm run scrape -w @mouse-parts/scraper-rtings --",
+    "scrape:all": "npm run scrape:oem -- --merge && npm run scrape:rtings -- --targets --merge --only-existing",
     "typecheck": "npm run typecheck -w @mouse-parts/shared && npm run typecheck -w @mouse-parts/web && npm run typecheck -w @mouse-parts/extension"
   },
   "engines": {

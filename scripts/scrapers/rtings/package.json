@@ -1,0 +1,12 @@
+{
+  "name": "@mouse-parts/scraper-rtings",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node src/cli.js"
+  },
+  "dependencies": {
+    "@mouse-parts/scraper-shared": "*",
+    "cheerio": "^1.1.0"
+  }
+}

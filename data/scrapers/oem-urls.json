@@ -1,0 +1,44 @@
+{
+  "note": "Allowlisted manufacturer product pages to scrape. Only https hosts in the OEM scraper allowlist.",
+  "targets": [
+    {
+      "id": "logitech-g-pro-x-superlight-2",
+      "brand": "Logitech",
+      "model": "G Pro X Superlight 2",
+      "urls": [
+        "https://www.logitechg.com/en-us/shop/p/pro-x-superlight-2-se",
+        "https://www.logitechg.com/en-us/products/gaming-mice/pro-x-superlight-2-wireless-gaming-mouse.html"
+      ]
+    },
+    {
+      "id": "logitech-g502-x-plus",
+      "brand": "Logitech",
+      "model": "G502 X Plus",
+      "urls": [
+        "https://www.logitechg.com/en-us/shop/p/g502x-plus",
+        "https://www.logitechg.com/en-us/products/gaming-mice/g502x-plus-wireless-mouse.html"
+      ]
+    },
+    {
+      "id": "razer-viper-v3-pro",
+      "brand": "Razer",
+      "model": "Viper V3 Pro",
+      "urls": ["https://www.razer.com/gaming-mice/razer-viper-v3-pro"]
+    },
+    {
+      "id": "steelseries-aerox-3-wireless",
+      "brand": "SteelSeries",
+      "model": "Aerox 3 Wireless",
+      "urls": ["https://steelseries.com/gaming-mice/aerox-3-wireless"]
+    },
+    {
+      "id": "hyperx-pulsefire-haste-2",
+      "brand": "HyperX",
+      "model": "Pulsefire Haste 2",
+      "urls": [
+        "https://hyperx.com/products/hyperx-pulsefire-haste-2-gaming-mouse",
+        "https://www.hyperxgaming.com/us/mice/pulsefire-haste-2-gaming-mouse"
+      ]
+    }
+  ]
+}

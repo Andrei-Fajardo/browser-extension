@@ -73,18 +73,21 @@ chrome.storage.sync.set({ apiBase: "https://your-deployment.vercel.app" })
 
 See [`data/catalog/mice.json`](./data/catalog/mice.json). Do not add part values without a citation URL. Niche brands are welcome with blank parts until sourced.
 
-## TechPowerUp importer
+## Scrapers
 
-See [`scripts/scrapers/techpowerup/README.md`](./scripts/scrapers/techpowerup/README.md).
-
-TechPowerUp **prohibits automated scraping without written permission**. Use offline `--from-html` imports, or set `TPU_I_HAVE_PERMISSION=1` only after contacting them.
-
-Apply the curated seed extractions:
+| Source | Command | Notes |
+|--------|---------|--------|
+| OEM (Logitech/Razer/…) | `npm run scrape:oem -- --merge` | robots-checked allowlist |
+| RTINGS | `npm run scrape:rtings -- --limit 40 --merge --only-existing` | free intro/meta only |
+| TechPowerUp | offline / permission-gated | see scraper README |
+| All safe automations | `npm run scrape:all` | OEM + RTINGS |
 
 ```bash
 npm install
-npm run scrape:tpu:apply-curated
+npm run scrape:all
 ```
+
+TechPowerUp **prohibits automated scraping without written permission** — keep using curated/offline imports there.
 
 ## Docs
 

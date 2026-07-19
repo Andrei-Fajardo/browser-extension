@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T07:49:14.197Z",
+  "updatedAt": "2026-07-19T08:08:09.033Z",
   "policy": "Only include part values with citable sources. Unknown fields must remain null.",
   "models": [
     {
@@ -12,7 +12,7 @@
         "Superlight 2",
         "G Pro X Superlight 2 DEX"
       ],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "updatedAt": "2026-07-19T08:07:31.225Z",
       "parts": {
         "mainSwitches": {
           "value": "Omron D2FP-FH1 (China)",
@@ -22,8 +22,19 @@
               "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
               "title": "TechPowerUp: Logitech G Pro X Superlight 2",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.rtings.com/mouse/reviews/logitech/g-pro-x-superlight-2",
+              "title": "RTINGS: Logitech G PRO X SUPERLIGHT 2 (conflicting value: mechanical switches)",
+              "retrievedAt": "2026-07-19T08:06:30.267Z"
+            },
+            {
+              "url": "https://www.logitechg.com/en-us/shop/p/pro-x-superlight-2-se",
+              "title": "Logitech product page: Logitech G Pro X Superlight 2 (conflicting value: LIGHTFORCE)",
+              "retrievedAt": "2026-07-19T08:07:31.225Z"
             }
-          ]
+          ],
+          "notes": "Conflicting sourced value also reported: LIGHTFORCE"
         },
         "sideSwitches": {
           "value": null,
@@ -54,6 +65,16 @@
               "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
               "title": "TechPowerUp: Logitech G Pro X Superlight 2",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.rtings.com/mouse/reviews/logitech/g-pro-x-superlight-2",
+              "title": "RTINGS: Logitech G PRO X SUPERLIGHT 2",
+              "retrievedAt": "2026-07-19T08:06:30.267Z"
+            },
+            {
+              "url": "https://www.logitechg.com/en-us/shop/p/pro-x-superlight-2-se",
+              "title": "Logitech product page: Logitech G Pro X Superlight 2",
+              "retrievedAt": "2026-07-19T08:07:31.225Z"
             }
           ]
         },
@@ -65,8 +86,14 @@
               "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
               "title": "TechPowerUp: Logitech G Pro X Superlight 2",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.logitechg.com/en-us/shop/p/pro-x-superlight-2-se",
+              "title": "Logitech product page: Logitech G Pro X Superlight 2 (conflicting value: 32-bit ARM)",
+              "retrievedAt": "2026-07-19T08:07:31.225Z"
             }
-          ]
+          ],
+          "notes": "Conflicting sourced value also reported: 32-bit ARM"
         }
       }
     },
@@ -78,12 +105,18 @@
         "G502X Plus",
         "G502 X+"
       ],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "updatedAt": "2026-07-19T08:06:39.068Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "mechanical switches",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.rtings.com/mouse/reviews/logitech/g502-x-plus",
+              "title": "RTINGS: Logitech G502 X PLUS",
+              "retrievedAt": "2026-07-19T08:06:39.068Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -120,7 +153,7 @@
       "aliases": [
         "VV3 Pro"
       ],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "updatedAt": "2026-07-19T08:05:58.408Z",
       "parts": {
         "mainSwitches": {
           "value": "Razer Optical Mouse Switches Gen-3 (90 M)",
@@ -130,8 +163,14 @@
               "url": "https://www.techpowerup.com/review/razer-viper-v3-pro/",
               "title": "TechPowerUp: Razer Viper V3 Pro",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro",
+              "title": "Razer product page: Razer Viper V3 Pro (conflicting value: Optical Switch)",
+              "retrievedAt": "2026-07-19T08:05:58.408Z"
             }
-          ]
+          ],
+          "notes": "Conflicting sourced value also reported: Optical Switch"
         },
         "sideSwitches": {
           "value": null,
@@ -162,6 +201,11 @@
               "url": "https://www.techpowerup.com/review/razer-viper-v3-pro/",
               "title": "TechPowerUp: Razer Viper V3 Pro (conflicting value: Focus Pro 35K Optical Sensor Gen-2)",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro",
+              "title": "Razer product page: Razer Viper V3 Pro (conflicting value: Focus Pro 35K Optical Sensor Gen-2)",
+              "retrievedAt": "2026-07-19T08:05:58.408Z"
             }
           ],
           "notes": "Conflicting sourced value also reported: Focus Pro 35K Optical Sensor Gen-2"
@@ -187,7 +231,7 @@
         "Pulsefire Haste 2",
         "Haste 2"
       ],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "updatedAt": "2026-07-19T08:05:10.223Z",
       "parts": {
         "mainSwitches": {
           "value": "HyperX Switch (100 M)",
@@ -197,8 +241,14 @@
               "url": "https://www.techpowerup.com/review/hyperx-pulsefire-haste-2/",
               "title": "TechPowerUp: HyperX Pulsefire Haste 2",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://hyperx.com/products/hyperx-pulsefire-haste-2-gaming-mouse",
+              "title": "HyperX product page: Pulsefire Haste 2 (conflicting value: HyperX Switch)",
+              "retrievedAt": "2026-07-19T08:05:10.223Z"
             }
-          ]
+          ],
+          "notes": "Conflicting sourced value also reported: HyperX Switch"
         },
         "sideSwitches": {
           "value": null,
@@ -224,8 +274,14 @@
               "url": "https://www.techpowerup.com/review/hyperx-pulsefire-haste-2/",
               "title": "TechPowerUp: HyperX Pulsefire Haste 2",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://hyperx.com/products/hyperx-pulsefire-haste-2-gaming-mouse",
+              "title": "HyperX product page: Pulsefire Haste 2 (conflicting value: HyperX 26K Sensor)",
+              "retrievedAt": "2026-07-19T08:05:10.223Z"
             }
-          ]
+          ],
+          "notes": "Conflicting sourced value also reported: HyperX 26K Sensor"
         },
         "mcu": {
           "value": null,
@@ -331,7 +387,7 @@
       "aliases": [
         "Attack Shark X3"
       ],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "updatedAt": "2026-07-19T08:06:40.837Z",
       "parts": {
         "mainSwitches": {
           "value": null,
@@ -349,9 +405,15 @@
           "sources": []
         },
         "sensor": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "PixArt PAW3395",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.rtings.com/mouse/reviews/attack-shark/x3",
+              "title": "RTINGS: ATTACK SHARK X3",
+              "retrievedAt": "2026-07-19T08:06:40.837Z"
+            }
+          ]
         },
         "mcu": {
           "value": null,
@@ -478,7 +540,7 @@
         "OP1 we",
         "OP1we"
       ],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "updatedAt": "2026-07-19T08:08:07.234Z",
       "parts": {
         "mainSwitches": {
           "value": "Kailh GO Optical (80 M)",
@@ -488,8 +550,14 @@
               "url": "https://www.techpowerup.com/review/endgame-gear-op1we/",
               "title": "TechPowerUp: Endgame Gear OP1we",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.rtings.com/mouse/reviews/endgame-gear/op1we",
+              "title": "RTINGS: Endgame Gear OP1we (conflicting value: optical switches)",
+              "retrievedAt": "2026-07-19T08:08:07.234Z"
             }
-          ]
+          ],
+          "notes": "Conflicting sourced value also reported: optical switches"
         },
         "sideSwitches": {
           "value": null,

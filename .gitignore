@@ -16,5 +16,7 @@ Thumbs.db
 .turbo/
 apps/web/.vercel/
 apps/extension/vendor/
-data/scraped/techpowerup/*.html
+data/scraped/**/*.html
+data/scraped/oem/
+data/scraped/rtings/
 !data/scraped/techpowerup/curated-seed.json
