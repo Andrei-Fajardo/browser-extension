@@ -1,0 +1,22 @@
+{
+  "name": "@mouse-parts/extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite build --watch",
+    "prepare-ocr": "node ../../scripts/prepare-ocr-assets.mjs",
+    "build": "npm run prepare-ocr && tsc -p tsconfig.json --noEmit && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@mouse-parts/shared": "*",
+    "tesseract.js": "^6.0.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.326",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-static-copy": "^3.0.0"
+  }
+}

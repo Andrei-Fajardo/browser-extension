@@ -1,0 +1,20 @@
+{
+  "name": "mouse-parts-lookup",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev -w @mouse-parts/web",
+    "dev:extension": "npm run dev -w @mouse-parts/extension",
+    "build": "npm run build -w @mouse-parts/shared && npm run build -w @mouse-parts/web && npm run build -w @mouse-parts/extension",
+    "build:extension": "npm run build -w @mouse-parts/extension",
+    "build:web": "npm run build -w @mouse-parts/web",
+    "prepare-ocr": "node scripts/prepare-ocr-assets.mjs",
+    "typecheck": "npm run typecheck -w @mouse-parts/shared && npm run typecheck -w @mouse-parts/web && npm run typecheck -w @mouse-parts/extension"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

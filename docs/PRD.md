@@ -2,9 +2,21 @@
 
 **Product:** Mouse Parts Lookup — Browser Extension  
 **Repository:** https://github.com/Andrei-Fajardo/browser-extension  
-**Status:** Draft v0.1  
+**Status:** Draft v0.2  
 **Last updated:** 2026-07-19  
 **Owner:** Andrei Fajardo  
+
+---
+
+## 0. Decisions Log (resolved)
+
+| # | Decision | Choice |
+|---|----------|--------|
+| D1 | Brand coverage | **Mainstream + niche** — do not limit the catalog to large OEMs. Include boutique / lesser-known brands when sourced. |
+| D2 | In-page lookup | **Text selection + image region (OCR)** for MVP. |
+| D3 | Data delivery | **Small hosted API on Vercel** (not hard; same platform as the future website). Extension reads from API. |
+| D4 | Veracity signal | **Community tab** with **thumbs up / thumbs down** per model (and later per field) to gauge trust. |
+| D5 | Website | **Desktop website on Vercel after the extension MVP.** Shared API + catalog; marketing/search UI comes next. |
 
 ---
 
@@ -36,6 +48,7 @@ Today, technicians rely on fragmented sources (forums, teardown blogs, datasheet
 - Offline-only encyclopedic database with no refresh path.
 - Full repair tutorials / soldering guides (may link out later).
 - Firefox/Safari parity in the first release (Chromium first; others later if demanded).
+- Full marketing website in the extension milestone (website is a follow-on on Vercel).
 
 ---
 
@@ -130,25 +143,24 @@ Every result row shows:
 
 **Description:** Lens-like “find relevant mouse info on this page” without leaving the tab.
 
-**Modes (v1):**
+**Modes (MVP):**
 
 1. **Selection lookup** — User highlights text → context menu / shortcut → lookup.
 2. **Page scan** — User clicks “Scan page” → content script extracts candidate model strings from visible text (and optionally `alt`/`title` attributes) → ranked matches against catalog.
-
-**Modes (v1.1 / later):**
-
-3. **Image / OCR assist** — Optional: capture a region or use page images + OCR to extract model text (Chrome APIs / offscreen document). Explicitly secondary; text path ships first.
+3. **Image region OCR** — User draws a rectangle over the page (or a captured tab screenshot), OCR extracts text, then the same catalog matcher runs. Implemented via `captureVisibleTab` + crop + OCR (e.g. Tesseract in an offscreen document). OCR output is treated as a **query string only**, never as verified part data.
 
 **Behavior:**
 
 - Runs in an isolated content script; does not modify page layout beyond a lightweight overlay/side panel.
 - Candidates are matched against the catalog with fuzzy matching; only high-confidence catalog hits auto-open a Parts Card.
 - Ambiguous hits present a disambiguation list.
+- Low-confidence OCR results prompt the user to confirm/edit the extracted text before search.
 
 **Acceptance criteria:**
 
 - [ ] Highlighting a known model name returns the same Parts Card as global search.
-- [ ] Page scan does not inject unverified part data into the host page DOM as facts.
+- [ ] Image region OCR can extract a model name from a clear screenshot and search the API.
+- [ ] Page scan / OCR never invent part numbers; they only produce search queries.
 - [ ] Works on common retail / review / wiki pages without breaking site JS.
 
 ---
@@ -181,14 +193,35 @@ Every result row shows:
 
 ---
 
-### 6.4 F4 — Contribution & Correction Path (Priority: P1)
+### 6.4 F4 — Community Veracity (Priority: P0)
 
-- In-extension “Report incorrect data” → opens GitHub issue template with model, field, current value, suggested correction, source URL.
-- Optional: community JSON/YAML contributions via PR with schema validation in CI.
+**Description:** A **Community** tab in the extension (and later on the website) where users can signal whether a model’s parts card seems accurate.
+
+**Behavior:**
+
+- Per model: **thumbs up** / **thumbs down** (one vote per browser install / anonymous voter id stored locally).
+- Display aggregates: `up`, `down`, and a simple veracity ratio (e.g. up / (up+down)).
+- Votes never auto-rewrite catalog fields. They are a **signal** for maintainers and other users.
+- Optional later: per-field voting; for MVP, vote on the whole model card.
+- “Report incorrect data” still opens a GitHub issue template with model, field, current value, suggested correction, source URL.
+
+**Acceptance criteria:**
+
+- [ ] User can upvote/downvote a model and see updated counts from the API.
+- [ ] Changing a vote replaces the previous vote (not double-counting).
+- [ ] Catalog values are unaffected by votes.
 
 ---
 
-### 6.5 F5 — Caching & Performance (Priority: P1)
+### 6.5 F5 — Contribution & Correction Path (Priority: P1)
+
+- In-extension “Report incorrect data” → opens GitHub issue template with model, field, current value, suggested correction, source URL.
+- Optional: community JSON/YAML contributions via PR with schema validation in CI.
+- Niche brands welcome when accompanied by a citable source.
+
+---
+
+### 6.6 F6 — Caching & Performance (Priority: P1)
 
 - Local cache (chrome.storage / IndexedDB) for recent lookups.
 - Offline: show last cached sourced data with “cached at” banner; never invent fresher data offline.
@@ -235,14 +268,30 @@ Null/`unknown` is a first-class valid state.
 | Area | Proposal |
 |------|----------|
 | Extension platform | Chrome Manifest V3 |
-| UI | Popup + Side Panel; vanilla or lightweight React/Vite |
-| Local search | FlexSearch / MiniSearch over curated catalog |
-| Content scripts | Selection + page text extraction |
-| Backend (optional v1) | Static JSON published in-repo or GitHub Pages / CDN; scrapers as Node scripts in CI or scheduled jobs |
+| UI | Popup + Side Panel; lightweight Vite build; **Search** + **Community** tabs |
+| Hosted API | **Vercel** (Next.js App Router API routes) — search, model detail, votes |
+| Catalog | Versioned JSON in-repo; API serves it; scrapers refresh via pipeline |
+| Votes store | Persistent store on Vercel (KV/Redis or equivalent); local anonymous voter id in `chrome.storage` |
+| Local search cache | MiniSearch / cached API responses in extension storage |
+| Content scripts | Selection + page text extraction + region overlay |
+| OCR | Offscreen document + Tesseract (or equivalent); query-only |
 | Scraping | Cheerio/Playwright in a **separate Node pipeline**, not inside the content script against arbitrary sites |
-| Auth | None for v1 read-only public data |
+| Website (later) | Same Vercel project / monorepo app — desktop search UI after extension MVP |
+| Auth | None for v1; anonymous voter ids only |
+
+**Why a small hosted API is fine:** Vercel serverless routes are low-ops, share the future website deploy, and keep scrapers/catalog off the client. Complexity is modest compared to scraping + OCR.
 
 **Why scrape outside the extension:** reliability, rate limiting, ToS compliance, and avoiding brittle per-page DOM scraping from user browsers.
+
+### 8.1 Monorepo layout (target)
+
+```
+apps/web          → Vercel Next.js (API now; website UI later)
+apps/extension    → Chrome MV3 extension
+packages/shared   → Types + Zod schema
+data/catalog      → Sourced mouse catalog JSON
+scripts/scrapers  → Allowlisted acquisition jobs
+```
 
 ---
 
@@ -283,20 +332,28 @@ Do not collect browsing history beyond the active lookup action. Do not phone ho
 
 ## 12. Milestones
 
-### M0 — Foundation (this PR)
-- PRD, repo skeleton, contribution/accuracy policy stub
+### M0 — Foundation
+- PRD, decisions log, repo skeleton
 
-### M1 — Curated catalog + search popup
-- Schema, seed data (only verified/sourced entries), search UI, Unknown-safe rendering
+### M1 — Hosted API + curated catalog + search popup
+- Vercel API (`/api/search`, `/api/models/:id`, `/api/votes`)
+- Schema + seed data (mainstream **and** niche brands; empty fields allowed)
+- Extension Search tab with Unknown-safe rendering
 
-### M2 — Search within page
-- Context menu selection lookup + page scan side panel
+### M2 — Community veracity
+- Thumbs up/down + Community tab aggregates
 
-### M3 — Scraping pipeline
+### M3 — Search within page
+- Context menu selection lookup + page scan + **image region OCR**
+
+### M4 — Scraping pipeline
 - Allowlisted scrapers, provenance storage, refresh job, catalog publish
 
-### M4 — Hardening
-- Conflict UI, report-incorrect flow, CI validation, docs for contributors
+### M5 — Hardening
+- Conflict UI, report-incorrect flow, CI validation, contributor docs
+
+### M6 — Vercel desktop website (after extension)
+- Shared API/catalog; desktop search + community UI
 
 ---
 
@@ -306,19 +363,20 @@ Do not collect browsing history beyond the active lookup action. Do not phone ho
 |------|------------|
 | Scraping blocked / ToS | Prefer APIs, mirrors, manual curated imports; keep allowlist small |
 | Incomplete catalog frustrates users | UX that celebrates Unknown + contribution CTA |
-| Wrong community data | Confidence tiers; verified ≠ community |
+| Wrong community data | Confidence tiers; votes are signals only; verified ≠ community |
 | Brand name ambiguity (e.g. “Pulsefire”) | Disambiguation UI + aliases |
+| Niche brand coverage gaps | Accept blanks; prioritize sourced contributions over guessing |
+| OCR misreads | Confirm/edit extracted text before search; never treat OCR as part facts |
 | Legal on manufacturer assets | Store facts/links, not scraped copyrighted full-page dumps in-repo when prohibited |
+| Vote abuse | Rate limits, one vote per voter id, no catalog mutation from votes |
 
 ---
 
-## 14. Open Questions
+## 14. Open Questions (remaining)
 
-1. Prefer **in-repo static catalog** only for v1, or a small hosted API?
-2. Which initial brands to prioritize (Logitech, Razer, HyperX/Pulsefire, Glorious, etc.)?
-3. Is image/OCR required for MVP, or text selection + page scan enough?
-4. Who owns “verified” promotion (maintainer-only vs trusted contributors)?
-5. Licensing for contributed teardown data (CC-BY, ODbL, etc.)?
+1. Licensing for contributed teardown data (CC-BY, ODbL, etc.)?
+2. Promote to `verified`: maintainer-only vs trusted contributor role?
+3. Production votes store: Vercel KV vs Upstash Redis vs Postgres (Neon)?
 
 ---
 
@@ -340,3 +398,4 @@ Do not collect browsing history beyond the active lookup action. Do not phone ho
 | Version | Date | Notes |
 |---------|------|-------|
 | 0.1 | 2026-07-19 | Initial PRD from product kickoff |
+| 0.2 | 2026-07-19 | Decisions: niche brands, OCR region, Vercel API, community votes; website after extension |

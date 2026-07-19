@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mouse Parts Lookup</title>
+    <link rel="stylesheet" href="/src/popup/popup.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <div>
+          <p class="eyebrow">Mouse Parts Lookup</p>
+          <h1>Parts, not guesses</h1>
+        </div>
+      </header>
+
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="search" type="button">Search</button>
+        <button class="tab" data-tab="page" type="button">Page</button>
+        <button class="tab" data-tab="community" type="button">Community</button>
+      </nav>
+
+      <section id="panel-search" class="panel active">
+        <label class="field">
+          <span>Brand or model</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Pulsefire, Lamzu, Vaxee…"
+            autocomplete="off"
+          />
+        </label>
+        <p id="search-status" class="status" aria-live="polite"></p>
+        <div id="search-results" class="results"></div>
+      </section>
+
+      <section id="panel-page" class="panel">
+        <p class="hint">
+          Look up text on the current tab, or draw a region for OCR. OCR only creates a search
+          query — it never invents part numbers.
+        </p>
+        <div class="actions">
+          <button id="btn-lookup-selection" type="button">Lookup selection</button>
+          <button id="btn-scan-page" type="button">Scan page text</button>
+          <button id="btn-region-ocr" type="button" class="primary">Select image region</button>
+        </div>
+        <label class="field">
+          <span>Extracted / confirmed query</span>
+          <input id="page-query" type="text" placeholder="Confirm OCR text here" />
+        </label>
+        <button id="btn-search-page-query" type="button" class="primary full">Search confirmed text</button>
+        <p id="page-status" class="status" aria-live="polite"></p>
+        <div id="page-results" class="results"></div>
+      </section>
+
+      <section id="panel-community" class="panel">
+        <p class="hint">
+          Thumbs up/down gauge whether a model card feels accurate. Votes never rewrite catalog
+          data.
+        </p>
+        <div id="community-list" class="results"></div>
+        <p id="community-status" class="status" aria-live="polite"></p>
+      </section>
+    </div>
+    <script type="module" src="/src/popup/main.ts"></script>
+  </body>
+</html>

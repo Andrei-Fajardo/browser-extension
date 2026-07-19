@@ -1,0 +1,535 @@
+{
+  "version": 1,
+  "updatedAt": "2026-07-19T00:00:00.000Z",
+  "policy": "Only include part values with citable sources. Unknown fields must remain null.",
+  "models": [
+    {
+      "id": "logitech-g-pro-x-superlight-2",
+      "brand": "Logitech",
+      "model": "G Pro X Superlight 2",
+      "aliases": ["GPX2", "Superlight 2", "G Pro X Superlight 2 DEX"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": "HERO 2",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.logitechg.com/en-us/products/gaming-mice/pro-x-superlight-2.html",
+              "title": "Logitech G PRO X SUPERLIGHT 2 product page",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "logitech-g502-x-plus",
+      "brand": "Logitech",
+      "model": "G502 X Plus",
+      "aliases": ["G502X Plus", "G502 X+"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": "HERO 25K",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.logitechg.com/en-us/products/gaming-mice/g502x-plus-wireless-mouse.html",
+              "title": "Logitech G502 X Plus product page",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "razer-viper-v3-pro",
+      "brand": "Razer",
+      "model": "Viper V3 Pro",
+      "aliases": ["VV3 Pro"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": "Focus Pro 35K Optical Sensor",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro",
+              "title": "Razer Viper V3 Pro product page",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "hyperx-pulsefire-haste-2",
+      "brand": "HyperX",
+      "model": "Pulsefire Haste 2",
+      "aliases": ["Pulsefire Haste 2", "Haste 2"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "vaxee-xe",
+      "brand": "Vaxee",
+      "model": "XE",
+      "aliases": ["Vaxee XE"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "lamzu-atlantis-mini-pro",
+      "brand": "Lamzu",
+      "model": "Atlantis Mini Pro",
+      "aliases": ["Atlantis Mini Pro", "Lamzu Atlantis Mini"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "attack-shark-x3",
+      "brand": "Attack Shark",
+      "model": "X3",
+      "aliases": ["Attack Shark X3"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "darmoshark-m3",
+      "brand": "Darmoshark",
+      "model": "M3",
+      "aliases": ["Darmoshark M3"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "wlmouse-beast-x",
+      "brand": "WLMouse",
+      "model": "Beast X",
+      "aliases": ["Beast X", "WLMouse BeastX"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "pulsar-x2v2",
+      "brand": "Pulsar",
+      "model": "X2V2",
+      "aliases": ["X2 V2", "Pulsar X2 V2"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "endgame-gear-op1we",
+      "brand": "Endgame Gear",
+      "model": "OP1we",
+      "aliases": ["OP1 we", "OP1we"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "zaunkoenig-m2k",
+      "brand": "Zaunkoenig",
+      "model": "M2K",
+      "aliases": ["Zaunkoenig M2K"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "g-wolves-htx-ultra",
+      "brand": "G-Wolves",
+      "model": "HTX Ultra",
+      "aliases": ["HTX Ultra", "GWolves HTX Ultra"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "finalmouse-ultralightx",
+      "brand": "Finalmouse",
+      "model": "UltralightX",
+      "aliases": ["ULX", "Ultralight X"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "steelseries-aerox-3-wireless",
+      "brand": "SteelSeries",
+      "model": "Aerox 3 Wireless",
+      "aliases": ["Aerox 3"],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "sensor": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    }
+  ]
+}
