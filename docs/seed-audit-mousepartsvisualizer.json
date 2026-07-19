@@ -1,0 +1,1115 @@
+{
+  "auditedAt": "2026-07-19T12:40:01.400Z",
+  "source": "f:\\Backup\\Ramsta E\\Coding Projects\\MousePartsVisualizer\\seed-mice-export.json",
+  "total": 306,
+  "summary": {
+    "importable": 236,
+    "switchGarbage": 13,
+    "encoderTruncated": 33,
+    "bothBad": 13,
+    "weakSwitch": 11,
+    "mcuPresent": 0,
+    "withCitationUrl": 0
+  },
+  "rootCauses": [
+    "parseSwitch() mangled TPU color/shell descriptions into brand=blue model=shell",
+    "scrapeEncoderDetails() used (\\w+) and truncated F-Switch to F / CF-Switch to CF",
+    "MCU never scraped from TPU specs table",
+    "No per-mouse source URL in export"
+  ],
+  "examples": {
+    "switchGarbage": [
+      {
+        "id": "ajazz-aj199",
+        "brand": "Ajazz",
+        "model": "AJ199",
+        "switch": {
+          "brand": "blue",
+          "model": "shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "arbiter-studio-akitsu",
+        "brand": "Arbiter Studio",
+        "model": "AKITSU",
+        "switch": {
+          "brand": "pink",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "delux-m900-pro",
+        "brand": "DELUX",
+        "model": "M900 Pro",
+        "switch": {
+          "brand": "blue",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "Huano",
+          "height": 13,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "g-wolves-fenrir-max-8k",
+        "brand": "G-Wolves",
+        "model": "Fenrir Max 8K",
+        "switch": {
+          "brand": "blue",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 7,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3950"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "g-wolves-hati-r-8k",
+        "brand": "G-Wolves",
+        "model": "Hati-R 8K",
+        "switch": {
+          "brand": "blue",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 8,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "g-wolves-hati-r-pro-8k",
+        "brand": "G-Wolves",
+        "model": "Hati-R Pro 8K",
+        "switch": {
+          "brand": "blue",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 7,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "incott-ghero-pro",
+        "brand": "Incott",
+        "model": "GHERO Pro",
+        "switch": {
+          "brand": "blue",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 10,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "lamzu-atlantis",
+        "brand": "Lamzu",
+        "model": "Atlantis",
+        "switch": {
+          "brand": "blue",
+          "model": "shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 9,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "lamzu-atlantis-mini",
+        "brand": "Lamzu",
+        "model": "Atlantis Mini",
+        "switch": {
+          "brand": "blue",
+          "model": "shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 8,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "lamzu-maya",
+        "brand": "Lamzu",
+        "model": "Maya",
+        "switch": {
+          "brand": "blue",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "rawm-es21m",
+        "brand": "RAWM",
+        "model": "ES21M",
+        "switch": {
+          "brand": "green",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 7,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3950"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "sharkoon-skiller-sgm70w",
+        "brand": "Sharkoon",
+        "model": "SKILLER SGM70W",
+        "switch": {
+          "brand": "green",
+          "model": "transparent shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      },
+      {
+        "id": "zaopin-z1-pro",
+        "brand": "Zaopin",
+        "model": "Z1 Pro",
+        "switch": {
+          "brand": "blue",
+          "model": "shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      }
+    ],
+    "encoderTruncated": [
+      {
+        "id": "alienware-pro-wireless-gaming-mouse",
+        "brand": "Alienware",
+        "model": "Pro Wireless Gaming Mouse",
+        "switch": {
+          "brand": "Omron",
+          "model": "D2FP-FN2",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "CF",
+          "height": 13,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "aqirys-t-g-a",
+        "brand": "AQIRYS",
+        "model": "T.G.A.",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3370"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "aqirys-t-g-a-alpha",
+        "brand": "AQIRYS",
+        "model": "T.G.A. Alpha",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 13,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3370"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "aqirys-t-g-a-wired",
+        "brand": "AQIRYS",
+        "model": "T.G.A. Wired",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PMW3389"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "corsair-m75-air",
+        "brand": "Corsair",
+        "model": "M75 Air",
+        "switch": {
+          "brand": "TTC",
+          "model": "Optical",
+          "type": "optical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "CF",
+          "height": 12,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3393"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "corsair-sabre-v2-pro",
+        "brand": "Corsair",
+        "model": "Sabre v2 Pro",
+        "switch": {
+          "brand": "Corsair",
+          "model": "Mechanical",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": null,
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "dareu-a950",
+        "brand": "Dareu",
+        "model": "A950",
+        "switch": {
+          "brand": "Omron",
+          "model": "D2FC-F-7N",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3950"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "dareu-a980-pro-max",
+        "brand": "DAREU",
+        "model": "A980 Pro Max",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 15,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3950"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "darmoshark-m3",
+        "brand": "Darmoshark",
+        "model": "M3",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 10,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "darmoshark-m5",
+        "brand": "Darmoshark",
+        "model": "M5",
+        "switch": {
+          "brand": "Kailh",
+          "model": "White Sword",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 9,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "delux-m800-ultra",
+        "brand": "DELUX",
+        "model": "M800 Ultra",
+        "switch": {
+          "brand": "Huano",
+          "model": "Huano (80 M)",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "dream-machines-dm7-switch-duo",
+        "brand": "Dream Machines",
+        "model": "DM7 Switch Duo",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3370"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "dream-machines-dm8-mini-pro",
+        "brand": "Dream Machines",
+        "model": "DM8 Mini Pro",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "fantech-helios-go-xd5",
+        "brand": "Fantech",
+        "model": "Helios Go XD5",
+        "switch": {
+          "brand": "Kailh",
+          "model": "GM 8.0",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 11,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3370"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      },
+      {
+        "id": "fantech-helios-ii-pro",
+        "brand": "Fantech",
+        "model": "Helios II Pro",
+        "switch": {
+          "brand": "TTC",
+          "model": "Optical Gold",
+          "type": "optical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "F",
+          "height": 12,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": null,
+        "encoderIssue": "truncated"
+      }
+    ],
+    "validHuanoColorName": [
+      {
+        "id": "atk-f1-extreme",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Pink Dot",
+          "type": "mechanical",
+          "rating": "80M clicks"
+        }
+      },
+      {
+        "id": "atk-x1-pro",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Pink Dot",
+          "type": "mechanical",
+          "rating": "80M clicks"
+        }
+      },
+      {
+        "id": "attack-shark-x11",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Pink Dot",
+          "type": "mechanical",
+          "rating": "80M clicks"
+        }
+      },
+      {
+        "id": "mchose-a5-pro",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Pink Dot",
+          "type": "mechanical",
+          "rating": "80M clicks"
+        }
+      },
+      {
+        "id": "pulsar-zywoo-the-chosen-mouse-medium",
+        "switch": {
+          "brand": "Huano",
+          "model": "Huano (blue transparent shell/pink plunger)",
+          "type": "mechanical",
+          "rating": ""
+        }
+      },
+      {
+        "id": "vxe-r1-pro",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Pink Dot",
+          "type": "mechanical",
+          "rating": "80M clicks"
+        }
+      },
+      {
+        "id": "zowie-ec2-c",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Blue Dot",
+          "type": "mechanical",
+          "rating": "60M clicks"
+        }
+      },
+      {
+        "id": "zowie-ec2-cw",
+        "switch": {
+          "brand": "Huano",
+          "model": "Blue Shell Blue Dot",
+          "type": "mechanical",
+          "rating": "60M clicks"
+        }
+      }
+    ],
+    "spotlight": [
+      {
+        "id": "logitech-gpro-x-superlight-2",
+        "switch": {
+          "brand": "Logitech",
+          "model": "Lightforce Hybrid",
+          "type": "optical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "Kailh",
+          "height": 9,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "Logitech",
+          "model": "Hero 2",
+          "dpi": 32000
+        },
+        "switchIssue": null,
+        "encoderIssue": null
+      },
+      {
+        "id": "logitech-g-pro-x-superlight",
+        "switch": {
+          "brand": "Omron",
+          "model": "D2FP-FH1",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 9,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "Logitech",
+          "model": "HERO 2"
+        },
+        "switchIssue": null,
+        "encoderIssue": null
+      },
+      {
+        "id": "hyperx-pulsefire-haste-2",
+        "switch": {
+          "brand": "HyperX",
+          "model": "Switch",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 10,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "HyperX 26K"
+        },
+        "switchIssue": null,
+        "encoderIssue": null
+      },
+      {
+        "id": "razer-viper-v3-pro",
+        "switch": {
+          "brand": "Razer",
+          "model": "Optical Mouse Switches Gen-3",
+          "type": "optical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 8,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "Pro 35K"
+        },
+        "switchIssue": null,
+        "encoderIssue": null
+      },
+      {
+        "id": "lamzu-atlantis-mini",
+        "switch": {
+          "brand": "blue",
+          "model": "shell",
+          "type": "mechanical",
+          "rating": ""
+        },
+        "encoder": {
+          "brand": "TTC",
+          "height": 8,
+          "type": "mechanical"
+        },
+        "sensor": {
+          "brand": "PixArt",
+          "model": "PAW3395"
+        },
+        "switchIssue": "color_as_brand",
+        "encoderIssue": null
+      }
+    ]
+  },
+  "importableIds": [
+    "abkoncore-a530",
+    "abkoncore-a660",
+    "abkoncore-a900",
+    "arye-rcc-1",
+    "asus-rog-chakram-core",
+    "asus-rog-chakram-x",
+    "asus-rog-gladius-iii",
+    "asus-rog-gladius-iii-wireless",
+    "asus-rog-harpe-ace-aim-lab-edition",
+    "asus-rog-harpe-ace-extreme",
+    "asus-rog-harpe-ace-mini",
+    "asus-rog-harpe-ii-ace",
+    "asus-rog-keris-ii-ace",
+    "asus-rog-keris-ii-origin",
+    "asus-rog-keris-wireless-aimpoint",
+    "asus-rog-pugio-ii",
+    "asus-rog-spatha-x",
+    "asus-rog-strix-carry",
+    "asus-rog-strix-impact-ii",
+    "asus-rog-strix-impact-ii-moonlight-white",
+    "asus-rog-strix-impact-iii",
+    "asus-rog-tuf-m3",
+    "asus-rog-tuf-m3-gen-ii",
+    "asus-rog-tuf-m4-air",
+    "asus-rog-tuf-m4-wireless",
+    "atk-f1-extreme",
+    "atk-x1-pro",
+    "atompalm-hydrogen",
+    "attack-shark-x11",
+    "cooler-master-mm310",
+    "cooler-master-mm311",
+    "cooler-master-mm711",
+    "cooler-master-mm712",
+    "cooler-master-mm720",
+    "coolermaster-mm730",
+    "cooler-master-mm731",
+    "corsair-dark-core-rgb-pro-se",
+    "corsair-darkstar-wireless",
+    "corsair-glaive-rgb-pro",
+    "corsair-ironclaw-wireless",
+    "corsair-katar-elite-wireless",
+    "corsair-katar-pro-xt",
+    "corsair-m55-rgb-pro",
+    "corsair-m65-rgb-ultra",
+    "corsair-m65-rgb-ultra-wireless",
+    "corsair-m65-ultra",
+    "corsair-nightsabre-wireless",
+    "corsair-nightsword-rgb",
+    "corsair-sabre-rgb-pro",
+    "corsair-scimitar-elite-wireless",
+    "corsair-scimitar-elite-wireless-se",
+    "corsair-scimitar-rgb-elite",
+    "dareu-em901x",
+    "dark-project-me1",
+    "dark-project-me2",
+    "darmoshark-m3-4k",
+    "darmoshark-m3s-varun",
+    "delux-m800-pro",
+    "dream-machines-dm2-supreme",
+    "dream-machines-dm5-blink",
+    "dream-machines-dm9-skill-wireless",
+    "ducky-feather",
+    "easysmx-bd-01",
+    "endgame-gear-op1-8k",
+    "endgame-gear-op1we",
+    "endgame-gear-xm1-white",
+    "endgame-gear-xm1r",
+    "endgame-gear-xm2-8k",
+    "endgame-gear-xm2w-4k",
+    "endgame-gear-xm2w-4k-v2",
+    "endgame-xm2we",
+    "endgame-gear-xm2we",
+    "evga-x12",
+    "evga-x15",
+    "evga-x17",
+    "evga-x20",
+    "fantech-aria-xd7",
+    "fantech-helios-xd3v2",
+    "finalmouse-starlight-pro",
+    "finalmouse-starlight-12",
+    "finalmouse-ultralight-2",
+    "finalmouse-ulx-ultralight-x",
+    "fnatic-bolt",
+    "g-wolves-fenrir-asym-8k",
+    "g-wolves-hati-s",
+    "g-wolves-hsk-pro",
+    "g-wolves-htm-plus",
+    "g-wolves-htx",
+    "g-wolves-skoll-mini",
+    "g-wolves-vuk",
+    "gamesense-meta",
+    "glorious-model-d",
+    "glorious-model-d-2",
+    "glorious-model-i",
+    "glorious-model-o",
+    "glorious-model-o-",
+    "hitscan-hyperlight",
+    "hk-gaming-mira-m",
+    "hk-gaming-mira-s",
+    "hk-gaming-naos-m",
+    "hyperx-pulsefire-haste",
+    "hyperx-pulsefire-haste-2",
+    "keychron-m3",
+    "keychron-m6",
+    "lamzu-firm",
+    "lamzu-inca",
+    "lamzu-thorn",
+    "logitech-g-mx518",
+    "logitech-gpro-wireless",
+    "logitech-g-pro-x-superlight",
+    "logitech-gpro-x-superlight-2",
+    "logitech-g303-shroud",
+    "logitech-g305",
+    "logitech-g403-hero",
+    "logitech-g403-wireless",
+    "logitech-g502-hero",
+    "logitech-g502-x-wireless",
+    "logitech-g604",
+    "logitech-g703-hero",
+    "mad-catz-m-o-j-o-m1",
+    "mad-catz-r-a-t-dws",
+    "mad-catz-r-a-t-pro-x3-supreme",
+    "marsback-zephyr-pro",
+    "mchose-a5-pro",
+    "mchose-a7-v2-ultra",
+    "mchose-ax5-pro-max",
+    "mchose-l7-pro",
+    "mionix-avior-pro",
+    "mionix-castor-pro",
+    "mionix-naos-pro",
+    "mountain-makalu-67",
+    "mountain-makalu-max",
+    "msi-clutch-gm41-lightweight",
+    "msi-clutch-gm41-lightweight-wireless",
+    "ninjutso-katana",
+    "nzxt-lift-2-ergo",
+    "nzxt-lift-2-symm",
+    "nzxt-lift-elite-wireless",
+    "orbital-works-pathfinder",
+    "ploopy-mouse",
+    "powercolor-alphyn-am10",
+    "pulsar-feinmann-f01",
+    "pulsar-tenz-signature-edition",
+    "pulsar-x2",
+    "pulsar-x2-mini",
+    "pulsar-x2h",
+    "pulsar-x2h-mini",
+    "pulsar-x2v2",
+    "pulsar-xlite-v2",
+    "pulsar-xlite-v3",
+    "pulsar-zywoo-the-chosen-mouse-medium",
+    "pwnage-stormbreaker",
+    "pwnage-stormbreaker-max-cf",
+    "pwnage-trinity-cf",
+    "rapoo-vt2-max",
+    "rapoo-vt3pro-max",
+    "rapoo-vt7-max",
+    "rapoo-vt9-air",
+    "rawm-leviathan-v4",
+    "razer-basilisk-v3",
+    "razer-basilisk-v3-pro",
+    "razer-cobra-hyperspeed",
+    "razer-cobra-pro",
+    "razer-deathadder-v2",
+    "razer-deathadder-v3-hyperspeed",
+    "razer-deathadder-v3-pro",
+    "razer-deathadder-v4-pro",
+    "razer-naga-v2-hyperspeed",
+    "razer-naga-v2-pro",
+    "razer-orochi-v2",
+    "razer-viper-8khz",
+    "razer-viper-mini",
+    "razer-viper-ultimate",
+    "razer-viper-v2-pro",
+    "razer-viper-v3-hyperspeed",
+    "razer-viper-v3-pro",
+    "redragon-cobra-m711-fps",
+    "redragon-m686-vampire-elite",
+    "redragon-m690",
+    "redragon-m711-cobra",
+    "redragon-m991-enlightenment",
+    "roccat-burst-core",
+    "roccat-burst-pro-air",
+    "roccat-kain-100-aimo",
+    "roccat-kain-200-aimo",
+    "roccat-kain-202",
+    "roccat-kone-pro-air",
+    "roccat-kone-pure-ultra",
+    "roccat-kone-xp",
+    "roccat-kone-xp-air",
+    "roccat-kova-aimo",
+    "scyrox-v6",
+    "sharkoon-light-100",
+    "sharkoon-light-180",
+    "sharkoon-light-200",
+    "sharkoon-light-s",
+    "spc-gear-lix-plus",
+    "spc-gear-lix-plus-wireless",
+    "steelseries-aerox-3",
+    "steelseries-aerox-5",
+    "steelseries-aerox-9-wireless",
+    "steelseries-prime-mini-wireless",
+    "steelseries-prime-wireless",
+    "steelseries-rival-3",
+    "steelseries-rival-5",
+    "steelseries-sensei-ten",
+    "tecware-impulse-pro",
+    "thermaltake-argent-m5-rgb",
+    "thermaltake-argent-m5-wireless-rgb",
+    "thunderobot-ml903-nearlink",
+    "turtle-beach-burst-ii-air",
+    "turtle-beach-burst-ii-pro",
+    "vaxee-e1-wireless-4k",
+    "vaxee-np-01",
+    "vaxee-outset-ax",
+    "vgn-dragonfly-f1-pro-max",
+    "victsing-mm057",
+    "vxe-r1-pro",
+    "waizowl-ogm-pro",
+    "wlmouse-beast-x",
+    "wlmouse-sword-x",
+    "xpg-alpha",
+    "xpg-alpha-wireless",
+    "xpg-primer",
+    "xpg-slingshot",
+    "xtrfy-m4",
+    "xtrfy-m42",
+    "xtrfy-mz1",
+    "zaopin-z2-4k",
+    "zaopin-zpw-max",
+    "zaunkoenig-m2k",
+    "zephyr-gaming-mouse",
+    "zowie-benq-s2-black",
+    "zowie-ec2-c",
+    "zowie-ec2-cw",
+    "zowie-fk2-c"
+  ],
+  "rejectIds": [
+    "ajazz-aj199",
+    "arbiter-studio-akitsu",
+    "delux-m900-pro",
+    "g-wolves-fenrir-max-8k",
+    "g-wolves-hati-r-8k",
+    "g-wolves-hati-r-pro-8k",
+    "incott-ghero-pro",
+    "lamzu-atlantis",
+    "lamzu-atlantis-mini",
+    "lamzu-maya",
+    "rawm-es21m",
+    "sharkoon-skiller-sgm70w",
+    "zaopin-z1-pro",
+    "alienware-pro-wireless-gaming-mouse",
+    "aqirys-t-g-a",
+    "aqirys-t-g-a-alpha",
+    "aqirys-t-g-a-wired",
+    "corsair-m75-air",
+    "corsair-sabre-v2-pro",
+    "dareu-a950",
+    "dareu-a980-pro-max",
+    "darmoshark-m3",
+    "darmoshark-m5",
+    "delux-m800-ultra",
+    "dream-machines-dm7-switch-duo",
+    "dream-machines-dm8-mini-pro",
+    "fantech-helios-go-xd5",
+    "fantech-helios-ii-pro",
+    "fantech-helios-xd3-v2",
+    "gamesense-mvp-wired",
+    "gamesense-mvp-wireless",
+    "genesis-krypton-750",
+    "glorious-series-2-pro-wireless",
+    "msi-clutch-gm31-lightweight",
+    "msi-clutch-gm31-lightweight-wireless",
+    "msi-clutch-gm51-lightweight",
+    "msi-clutch-gm51-lightweight-wireless",
+    "pulsar-xlite-wireless",
+    "pulsar-xlite-wireless-v2",
+    "scyrox-v8",
+    "spc-gear-gem-plus",
+    "teevolution-terra-pro",
+    "xtrfy-m4-wireless",
+    "xtrfy-m42-wireless",
+    "xtrfy-m8-wireless",
+    "xtrfy-mz1-wireless",
+    "cherry-xtrfy-m64-pro",
+    "cherry-xtrfy-m68-pro",
+    "fantech-aria-ii",
+    "fantech-aria-ii-pro",
+    "incott-hpc01m-pro",
+    "phylina-s480-max",
+    "rawm-sh01-pro",
+    "redragon-k1ng-4k-pro",
+    "redragon-k1ng-8k",
+    "redragon-k1ng-ultra",
+    "redragon-m808-storm-pro",
+    "waizowl-ogm-cloud",
+    "zaopin-z2-mini-4k"
+  ]
+}
