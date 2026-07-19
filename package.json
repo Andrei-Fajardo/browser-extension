@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "apps/*",
-    "packages/*"
+    "packages/*",
+    "scripts/scrapers/*"
   ],
   "scripts": {
     "dev:api": "npm run dev -w @mouse-parts/web",
@@ -12,6 +13,8 @@
     "build:extension": "npm run build -w @mouse-parts/extension",
     "build:web": "npm run build -w @mouse-parts/web",
     "prepare-ocr": "node scripts/prepare-ocr-assets.mjs",
+    "scrape:tpu:apply-curated": "npm run apply-curated -w @mouse-parts/scraper-techpowerup",
+    "scrape:tpu": "npm run scrape -w @mouse-parts/scraper-techpowerup --",
     "typecheck": "npm run typecheck -w @mouse-parts/shared && npm run typecheck -w @mouse-parts/web && npm run typecheck -w @mouse-parts/extension"
   },
   "engines": {

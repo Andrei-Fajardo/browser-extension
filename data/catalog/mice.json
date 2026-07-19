@@ -1,19 +1,29 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-19T00:00:00.000Z",
+  "updatedAt": "2026-07-19T07:49:14.197Z",
   "policy": "Only include part values with citable sources. Unknown fields must remain null.",
   "models": [
     {
       "id": "logitech-g-pro-x-superlight-2",
       "brand": "Logitech",
       "model": "G Pro X Superlight 2",
-      "aliases": ["GPX2", "Superlight 2", "G Pro X Superlight 2 DEX"],
+      "aliases": [
+        "GPX2",
+        "Superlight 2",
+        "G Pro X Superlight 2 DEX"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Omron D2FP-FH1 (China)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
+              "title": "TechPowerUp: Logitech G Pro X Superlight 2",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -21,9 +31,15 @@
           "sources": []
         },
         "encoder": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "TTC Silver, 8 mm",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
+              "title": "TechPowerUp: Logitech G Pro X Superlight 2",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sensor": {
           "value": "HERO 2",
@@ -33,13 +49,24 @@
               "url": "https://www.logitechg.com/en-us/products/gaming-mice/pro-x-superlight-2.html",
               "title": "Logitech G PRO X SUPERLIGHT 2 product page",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
+              "title": "TechPowerUp: Logitech G Pro X Superlight 2",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
             }
           ]
         },
         "mcu": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Nordic nRF52840",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/logitech-g-pro-x-superlight-2/",
+              "title": "TechPowerUp: Logitech G Pro X Superlight 2",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         }
       }
     },
@@ -47,7 +74,10 @@
       "id": "logitech-g502-x-plus",
       "brand": "Logitech",
       "model": "G502 X Plus",
-      "aliases": ["G502X Plus", "G502 X+"],
+      "aliases": [
+        "G502X Plus",
+        "G502 X+"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -87,13 +117,21 @@
       "id": "razer-viper-v3-pro",
       "brand": "Razer",
       "model": "Viper V3 Pro",
-      "aliases": ["VV3 Pro"],
+      "aliases": [
+        "VV3 Pro"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Razer Optical Mouse Switches Gen-3 (90 M)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/razer-viper-v3-pro/",
+              "title": "TechPowerUp: Razer Viper V3 Pro",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -101,9 +139,15 @@
           "sources": []
         },
         "encoder": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "TTC (blue, white core), 8 mm",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/razer-viper-v3-pro/",
+              "title": "TechPowerUp: Razer Viper V3 Pro",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sensor": {
           "value": "Focus Pro 35K Optical Sensor",
@@ -112,6 +156,73 @@
             {
               "url": "https://www.razer.com/gaming-mice/razer-viper-v3-pro",
               "title": "Razer Viper V3 Pro product page",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            },
+            {
+              "url": "https://www.techpowerup.com/review/razer-viper-v3-pro/",
+              "title": "TechPowerUp: Razer Viper V3 Pro (conflicting value: Focus Pro 35K Optical Sensor Gen-2)",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ],
+          "notes": "Conflicting sourced value also reported: Focus Pro 35K Optical Sensor Gen-2"
+        },
+        "mcu": {
+          "value": "Nordic nRF52840",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/razer-viper-v3-pro/",
+              "title": "TechPowerUp: Razer Viper V3 Pro",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "hyperx-pulsefire-haste-2",
+      "brand": "HyperX",
+      "model": "Pulsefire Haste 2",
+      "aliases": [
+        "Pulsefire Haste 2",
+        "Haste 2"
+      ],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": "HyperX Switch (100 M)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/hyperx-pulsefire-haste-2/",
+              "title": "TechPowerUp: HyperX Pulsefire Haste 2",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "sideSwitches": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        },
+        "encoder": {
+          "value": "Mechanical",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/hyperx-pulsefire-haste-2/",
+              "title": "TechPowerUp: HyperX Pulsefire Haste 2",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "sensor": {
+          "value": "HyperX 26K (PixArt PAW3395)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/hyperx-pulsefire-haste-2/",
+              "title": "TechPowerUp: HyperX Pulsefire Haste 2",
               "retrievedAt": "2026-07-19T00:00:00.000Z"
             }
           ]
@@ -124,50 +235,24 @@
       }
     },
     {
-      "id": "hyperx-pulsefire-haste-2",
-      "brand": "HyperX",
-      "model": "Pulsefire Haste 2",
-      "aliases": ["Pulsefire Haste 2", "Haste 2"],
-      "updatedAt": "2026-07-19T00:00:00.000Z",
-      "parts": {
-        "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
-        },
-        "sideSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
-        },
-        "encoder": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
-        },
-        "sensor": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
-        },
-        "mcu": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
-        }
-      }
-    },
-    {
       "id": "vaxee-xe",
       "brand": "Vaxee",
       "model": "XE",
-      "aliases": ["Vaxee XE"],
+      "aliases": [
+        "Vaxee XE"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Huano",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/vaxee-xe/",
+              "title": "TechPowerUp: VAXEE XE",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -175,14 +260,26 @@
           "sources": []
         },
         "encoder": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Mechanical",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/vaxee-xe/",
+              "title": "TechPowerUp: VAXEE XE",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sensor": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "PixArt PMW3389",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/vaxee-xe/",
+              "title": "TechPowerUp: VAXEE XE",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "mcu": {
           "value": null,
@@ -195,7 +292,9 @@
       "id": "lamzu-atlantis-mini-pro",
       "brand": "Lamzu",
       "model": "Atlantis Mini Pro",
-      "aliases": ["Atlantis Mini Pro", "Lamzu Atlantis Mini"],
+      "aliases": [
+        "Atlantis Mini Pro"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -229,7 +328,9 @@
       "id": "attack-shark-x3",
       "brand": "Attack Shark",
       "model": "X3",
-      "aliases": ["Attack Shark X3"],
+      "aliases": [
+        "Attack Shark X3"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -263,7 +364,9 @@
       "id": "darmoshark-m3",
       "brand": "Darmoshark",
       "model": "M3",
-      "aliases": ["Darmoshark M3"],
+      "aliases": [
+        "Darmoshark M3"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -297,7 +400,10 @@
       "id": "wlmouse-beast-x",
       "brand": "WLMouse",
       "model": "Beast X",
-      "aliases": ["Beast X", "WLMouse BeastX"],
+      "aliases": [
+        "Beast X",
+        "WLMouse BeastX"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -331,7 +437,10 @@
       "id": "pulsar-x2v2",
       "brand": "Pulsar",
       "model": "X2V2",
-      "aliases": ["X2 V2", "Pulsar X2 V2"],
+      "aliases": [
+        "X2 V2",
+        "Pulsar X2 V2"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -365,13 +474,22 @@
       "id": "endgame-gear-op1we",
       "brand": "Endgame Gear",
       "model": "OP1we",
-      "aliases": ["OP1 we", "OP1we"],
+      "aliases": [
+        "OP1 we",
+        "OP1we"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Kailh GO Optical (80 M)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/endgame-gear-op1we/",
+              "title": "TechPowerUp: Endgame Gear OP1we",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -379,14 +497,26 @@
           "sources": []
         },
         "encoder": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "TTC Silver, 9 mm",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/endgame-gear-op1we/",
+              "title": "TechPowerUp: Endgame Gear OP1we",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sensor": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "PixArt PAW3370",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/endgame-gear-op1we/",
+              "title": "TechPowerUp: Endgame Gear OP1we",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "mcu": {
           "value": null,
@@ -399,13 +529,21 @@
       "id": "zaunkoenig-m2k",
       "brand": "Zaunkoenig",
       "model": "M2K",
-      "aliases": ["Zaunkoenig M2K"],
+      "aliases": [
+        "Zaunkoenig M2K"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Omron D2F-01F",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/zaunkoenig-m2k/",
+              "title": "TechPowerUp: Zaunkoenig M2K",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -413,14 +551,26 @@
           "sources": []
         },
         "encoder": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "Mechanical",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/zaunkoenig-m2k/",
+              "title": "TechPowerUp: Zaunkoenig M2K",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sensor": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "PixArt PMW3360",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/zaunkoenig-m2k/",
+              "title": "TechPowerUp: Zaunkoenig M2K",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "mcu": {
           "value": null,
@@ -433,7 +583,10 @@
       "id": "g-wolves-htx-ultra",
       "brand": "G-Wolves",
       "model": "HTX Ultra",
-      "aliases": ["HTX Ultra", "GWolves HTX Ultra"],
+      "aliases": [
+        "HTX Ultra",
+        "GWolves HTX Ultra"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -467,7 +620,10 @@
       "id": "finalmouse-ultralightx",
       "brand": "Finalmouse",
       "model": "UltralightX",
-      "aliases": ["ULX", "Ultralight X"],
+      "aliases": [
+        "ULX",
+        "Ultralight X"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
@@ -501,13 +657,21 @@
       "id": "steelseries-aerox-3-wireless",
       "brand": "SteelSeries",
       "model": "Aerox 3 Wireless",
-      "aliases": ["Aerox 3"],
+      "aliases": [
+        "Aerox 3"
+      ],
       "updatedAt": "2026-07-19T00:00:00.000Z",
       "parts": {
         "mainSwitches": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "TTC Golden Micro Dustproof (80 M)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/steelseries-aerox-3-wireless/",
+              "title": "TechPowerUp: SteelSeries Aerox 3 Wireless",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "sideSwitches": {
           "value": null,
@@ -515,14 +679,80 @@
           "sources": []
         },
         "encoder": {
+          "value": "Mechanical",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/steelseries-aerox-3-wireless/",
+              "title": "TechPowerUp: SteelSeries Aerox 3 Wireless",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "sensor": {
+          "value": "TrueMove Air",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/steelseries-aerox-3-wireless/",
+              "title": "TechPowerUp: SteelSeries Aerox 3 Wireless",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "mcu": {
+          "value": null,
+          "confidence": "unknown",
+          "sources": []
+        }
+      }
+    },
+    {
+      "id": "lamzu-atlantis-mini",
+      "brand": "Lamzu",
+      "model": "Atlantis Mini",
+      "aliases": [
+        "LAMZU Atlantis Mini"
+      ],
+      "updatedAt": "2026-07-19T00:00:00.000Z",
+      "parts": {
+        "mainSwitches": {
+          "value": "Huano (blue shell, pink plunger)",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/lamzu-atlantis-mini/",
+              "title": "TechPowerUp: LAMZU Atlantis Mini",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
+        "sideSwitches": {
           "value": null,
           "confidence": "unknown",
           "sources": []
         },
+        "encoder": {
+          "value": "Mechanical",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/lamzu-atlantis-mini/",
+              "title": "TechPowerUp: LAMZU Atlantis Mini",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
+        },
         "sensor": {
-          "value": null,
-          "confidence": "unknown",
-          "sources": []
+          "value": "PixArt PAW3395",
+          "confidence": "sourced",
+          "sources": [
+            {
+              "url": "https://www.techpowerup.com/review/lamzu-atlantis-mini/",
+              "title": "TechPowerUp: LAMZU Atlantis Mini",
+              "retrievedAt": "2026-07-19T00:00:00.000Z"
+            }
+          ]
         },
         "mcu": {
           "value": null,

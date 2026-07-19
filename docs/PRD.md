@@ -346,8 +346,10 @@ Do not collect browsing history beyond the active lookup action. Do not phone ho
 ### M3 — Search within page
 - Context menu selection lookup + page scan + **image region OCR**
 
-### M4 — Scraping pipeline
-- Allowlisted scrapers, provenance storage, refresh job, catalog publish
+### M4 — Scraping / import pipeline
+- TechPowerUp importer (offline `--from-html` by default; live fetch gated on written permission — TPU ToS)
+- Curated seed extractions merged into catalog with citations
+- Provenance storage; no silent overwrite on conflicts
 
 ### M5 — Hardening
 - Conflict UI, report-incorrect flow, CI validation, contributor docs

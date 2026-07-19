@@ -73,6 +73,19 @@ chrome.storage.sync.set({ apiBase: "https://your-deployment.vercel.app" })
 
 See [`data/catalog/mice.json`](./data/catalog/mice.json). Do not add part values without a citation URL. Niche brands are welcome with blank parts until sourced.
 
+## TechPowerUp importer
+
+See [`scripts/scrapers/techpowerup/README.md`](./scripts/scrapers/techpowerup/README.md).
+
+TechPowerUp **prohibits automated scraping without written permission**. Use offline `--from-html` imports, or set `TPU_I_HAVE_PERMISSION=1` only after contacting them.
+
+Apply the curated seed extractions:
+
+```bash
+npm install
+npm run scrape:tpu:apply-curated
+```
+
 ## Docs
 
 - [PRD](./docs/PRD.md)
